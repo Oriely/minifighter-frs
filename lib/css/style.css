@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Early Gameboy;
+    src: url('../fonts/Early\ GameBoy.ttf');
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Early Gameboy;
+}
+#container {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#app {
+    display:grid;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: ;
+    grid-template-areas: 'stats game';
+                    
+}
+#stats {
+    grid-area: stats;
+}
+
+#gamescreen {
+    background-image: url('../imgs/gamebackground-2.png');
+    background-size:cover;
+    width:400px;
+    height:300px;
+    animation: backgroundScroll 10s linear infinite;
+    display:grid;
+    grid-template-rows:1fr 3fr 50px;
+    grid-area: game;
+
+}
+.combat-area {
+    display:flex;
+    justify-content: space-between;
+}
+
+.player {
+    font-size:50px;
+    width:98px;
+    height:84px;
+    align-self:flex-end;
+    transform:scaleX(-1);
+    background-image: url('../imgs/sprite2.png');
+    animation:moving 0.5s steps(3) forwards infinite;
+}
+
+.enemy {
+    font-size:50px;
+    align-self: flex-end;
+}
+
+
+@keyframes moving {
+    from {background-position: 0 0;}  
+    to {background-position: -288px 0;}
+}
+
+@keyframes backgroundScroll {
+    from {background-position: 0 0;}  
+    to {background-position: -400px 0;}  
+    }
