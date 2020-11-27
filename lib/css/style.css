@@ -21,7 +21,15 @@ body {
     height:100vh;
 }
 
-#app {
+#title {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    background:black;
+    color:white;
+    padding:5px;
+}
+#game-area {
     background:black;
     color:white;
     display:grid;
@@ -48,8 +56,8 @@ body {
 }
 #inventory {
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(42px, 42px));
-    grid-auto-rows: 42px;
+    grid-template-columns: repeat(auto-fill, minmax(59px, 59px));
+    grid-auto-rows: 59px;
 }
 
 #inventory > div {
